@@ -29,12 +29,14 @@ int main(int argc, char *argv[])
 
   int slen = sizeof(si_other);
 
-  char buf[1501];
+// make buffer much lager, but send only first 1500 bytes
+  char buf[16385];
 
   int maxLen = sizeof(buf) - 1;
 
   while (0 != fgets(buf, maxLen, stdin)) {
-    if (sendto(sock, buf, strlen(buf), 0, (const struct sockaddr *) &si_other, slen)==-1)
+    int len = strlen(buf);
+    if (sendto(sock, buf, (len > 1500) ? 1500 : len, 0, (const struct sockaddr *) &si_other, slen)==-1)
       dieWithError("sending udp datagram");
 // uncomend to send copy to stdout (tee like)
 //    fputs(buf, stdout);
