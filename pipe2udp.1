@@ -1,0 +1,24 @@
+.TH pipe2udp 1
+.SH NAME
+pipe2udp \- simple pipe to udp forwarder
+.SH SYNOPSIS
+.B pipe2udp  \fIIP\fR \fIport\fR
+.TP
+.B pipe2udp \fIconfig-file\fR
+.SH DESCRIPTION
+.B load-info
+pipe2udp can be used to forward logs or other data to other
+hosts for storage and processing. Using more then one destination
+can be also used for load balancing on one (so_reuse_port) or more
+servers. See the man pages for short instructions.
+.SH OPTIONS
+.TP
+.BR \fIIP\fR
+IP where to send UDP packets
+.TP
+.BR \fIport\fR
+port where to send UDP packets
+.TP
+.BR \fIconfig-file\fR
+path to file with IP:port pairs line by line
+

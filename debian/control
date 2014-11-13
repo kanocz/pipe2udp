@@ -1,0 +1,15 @@
+Source: pipe2udp
+Section: net
+Priority: extra
+Maintainer: Anton Skorokhod <anton@nsl.cz>
+Build-Depends: debhelper (>= 9), make
+Standards-Version: 3.9.5
+
+Package: pipe2udp
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: pipe2udp utility used for log forwarding
+ pipe2udp can be used to forward logs or other data to other
+ hosts for storage and processing. Using more then one destination
+ can be also used for load balancing on one (so_reuse_port) or more
+ servers. See the man pages for short instructions.

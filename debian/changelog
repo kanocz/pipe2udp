@@ -1,0 +1,5 @@
+pipe2udp (1.0) trusty; urgency=medium
+
+  * Initial release.
+
+ -- Anton Skorokhod <anton@nsl.cz>  Thu, 13 Nov 2014 16:34:02 +0100
